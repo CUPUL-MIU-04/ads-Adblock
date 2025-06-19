@@ -26,22 +26,9 @@
 ##div[id*="modal" i]:not([id*="player"])  
 ##div[class*="overlay" i]:not([class*="stream"])  
 
-### 🍪 BLOQUEO DE COOKIES + GDPR (No invasivo)  
-##div[id*="cookie" i]:remove()  
-##div[class*="gdpr" i]:remove()  
-##.cc_banner:remove()  
-
 ### 📺 EXCEPCIONES PARA STREAMING (Cuevana/Netflix/etc)  
 @@||cuevana.biz^$generichide  
 @@||googlevideo.com^$media,domain=cuevana.biz  
 @@||cloudflarestream.com^$media  
 @@||jwplatform.com^$domain=cuevana.biz  
 ##+js(remove-attr, autoplay, video)  
-
-### ⚠️ BLOQUEO DE TÉCNICAS AVANZADAS  
-##^script:has-text(/underlay/i)  
-##^script:has-text(/exitintent/i)  
-
-### 🛠️ REGLAS DE COMPATIBILIDAD  
-||$popup,domain=~cuevana.biz|~netflix.com  
-||$third-party,domain=~cuevana.biz  
