@@ -4,14 +4,11 @@
 ! 🔧 Compatible con: AdGuard, uBlock Origin, Adblock Plus
 ! ------------------------------------------------------------
 
-### 💥 OVERLAYS Y MODALES (Eliminación Total)
-##div[class*="popup" i]:remove()
-##div[id*="popup" i]:remove()
-##div[class*="modal" i]:remove()
-##div[id*="modal" i]:remove()
-##div[class*="overlay" i]:remove()
-##div[id*="overlay" i]:remove()
-##div[class*="lightbox" i]:remove()
-##div[class*="dialog" i]:remove()
-##div[class*="subscribe" i]:remove()
-##div[class*="newsletter" i]:remove()
+### ⚡ BLOQUEO DE ELEMENTOS DINÁMICOS
+##^script:has-text(/popup/i)
+##^script:has-text(/modal/i)
+##^script:has-text(/overlay/i)
+##^script:has-text(/lightbox/i)
+##^script:has-text(/underlay/i)
+##^script:has-text(/exitintent/i)
+##^script:has-text(/interstitial/i)
