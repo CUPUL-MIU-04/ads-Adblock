@@ -1,14 +1,69 @@
-! 🔥 BLOQUEADOR DE VENTANAS EMERGENTES EXTREMO (ULTRA-AGRESIVO)
-! ⚠️ ADVERTENCIA: Este filtro puede romper funcionalidades en algunos sitios
-! 📅 Última actualización: 2024
-! 🔧 Compatible con: AdGuard, uBlock Origin, Adblock Plus
+! 🚫 ANNOYING ELEMENT BLOCKER - COMPREHENSIVE FILTER LIST
+! Blocks: Cookie Banners, Newsletter Popups, Floating Social Bars, Autoplay Videos, and more
+! Last Updated: 2024
+! Works with: uBlock Origin, AdGuard, Adblock Plus
 ! ------------------------------------------------------------
 
-### ⚡ BLOQUEO DE ELEMENTOS DINÁMICOS
-##^script:has-text(/popup/i)
-##^script:has-text(/modal/i)
-##^script:has-text(/overlay/i)
-##^script:has-text(/lightbox/i)
-##^script:has-text(/underlay/i)
-##^script:has-text(/exitintent/i)
-##^script:has-text(/interstitial/i)
+### 📧 NEWSLETTER POPUPS
+##div[id*="newsletter"]
+##div[class*="newsletter"]
+##div[id*="subscribe"]
+##div[class*="subscribe"]
+##.email-popup
+##.lead-form
+##.signup-modal
+
+### 🔔 ANNOYING NOTIFICATION BARS
+##div[class*="notification"]
+##div[id*="notification"]
+##.alert-bar
+##.top-banner
+##.promo-bar
+##.site-message
+
+### ▶️ AUTOPLAY VIDEO BLOCKER
+##video[autoplay]
+##iframe[src*="autoplay"]
+##.autoplay-video
+||youtube.com/get_video_info*
+
+### 🏷️ FLOATING SOCIAL MEDIA BARS
+##.social-share
+##.share-bar
+##.floating-share
+##.sticky-social
+##.follow-us
+
+### 💰 IN-PAGE ADS & SPONSORED CONTENT
+##.sponsored-content
+##.recommended-widget
+##.partner-box
+##.ad-placement
+##.paid-article
+##.native-ad
+
+### 🚫 OTHER ANNOYING ELEMENTS
+##.scroll-jacking
+##.exit-intent
+##.age-gate
+##.paywall
+##.premium-overlay
+##.app-download-banner
+##.floating-chat
+##.live-chat
+##.survey-popup
+
+### 🛡️ SITE-SPECIFIC FIXES
+! News Sites
+##.breaking-news-ticker
+##.article-recommendations
+
+! E-commerce Sites
+##.abandon-cart-popup
+##.discount-popup
+##.countdown-timer
+
+! Streaming Sites
+##.upsell-banner
+##.premium-promo
+##.subscribe-now
