@@ -1,6 +1,6 @@
 ! 🔥 BLOQUEADOR DE VENTANAS EMERGENTES EXTREMO (ULTRA-AGRESIVO)
 ! ⚠️ ADVERTENCIA: Este filtro puede romper funcionalidades en algunos sitios
-! 📅 Última actualización: 2024
+! 📅 Última actualización: 18/06/2025
 ! 🔧 Compatible con: AdGuard, uBlock Origin, Adblock Plus
 ! ------------------------------------------------------------
 
@@ -41,16 +41,16 @@
 ||*/adlink?url=*$popup
 
 ### 💥 OVERLAYS Y MODALES (Eliminación Total)
-##div[class*="popup" i]:remove()
-##div[id*="popup" i]:remove()
+##div[class^="popup" i]:remove()
+##div[id^="popup" i]:remove()
 ##div[class^="modal" i]:remove()
 ##div[id^="modal" i]:remove()
-##div[class*="overlay" i]:remove()
+##div[class^="overlay" i]:remove()
 ##div[id^="overlay" i]:remove()
-##div[class*="lightbox" i]:remove()
-##div[class*="dialog" i]:remove()
-##div[class*="subscribe" i]:remove()
-##div[class*="newsletter" i]:remove()
+##div[class^="lightbox" i]:remove()
+##div[class^="dialog" i]:remove()
+##div[class^="subscribe" i]:remove()
+##div[class^="newsletter" i]:remove()
 
 ### ⚡ BLOQUEO DE ELEMENTOS DINÁMICOS
 ##^script:has-text(/popup/i)
