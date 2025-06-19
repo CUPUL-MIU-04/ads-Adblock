@@ -1,20 +1,8 @@
 ! 🔥 BLOQUEADOR DE VENTANAS EMERGENTES EXTREMO (ULTRA-AGRESIVO)
 ! ⚠️ ADVERTENCIA: Este filtro puede romper funcionalidades en algunos sitios
-! 📅 Última actualización: 18/06/2025
+! 📅 Última actualización: 2024
 ! 🔧 Compatible con: AdGuard, uBlock Origin, Adblock Plus
 ! ------------------------------------------------------------
-
-### 🎯 BLOQUEO DE TECNOLOGÍAS DE POPUPS
-||*/popup*.js
-||*/popunder*.js
-||*/modal.js
-||*/lightbox.js
-||*/overlay.js
-||*/adwindow.js
-||*/exitpop.js
-||*/popads/*.js
-||*/popcorn.js
-||*/popuptest.js
 
 ### 🌐 DOMINIOS DE ANUNCIOS/POPUPS (Nivel Nuclear)
 ||doubleclick.net^$popup,important
