@@ -1,0 +1,47 @@
+! 📢 Lista combinada: Whitelist + Publicidad Permitida  
+! Última actualización: 2024  
+! -----------------------------------------------  
+
+### 🔒 WHITELIST (Dominios esenciales - NO BLOQUEAR)  
+||google.com^  
+||googleapis.com^  
+||microsoft.com^  
+||apple.com^  
+||cloudflare.com^  
+||wikipedia.org^  
+||github.com^  
+||stackoverflow.com^  
+||paypal.com^  
+||stripe.com^  
+||openai.com^  
+||duckduckgo.com^  
+
+! Redes sociales (opcional)  
+||twitter.com^  
+||facebook.com^  
+||instagram.com^  
+||linkedin.com^  
+
+! Streaming (excepciones)  
+||youtube.com^  
+||netflix.com^  
+||spotify.com^  
+||twitch.tv^  
+
+### 📢 ADS ALLOWED (Publicidad no intrusiva permitida)  
+! Anuncios permitidos para apoyar sitios pequeños  
+||reddit.com^$domain=~reddit.com  
+||twitch.tv^$domain=~twitch.tv  
+
+! Publicidad en blogs/platforms pequeñas  
+||wordpress.com^$subdocument  
+||blogspot.com^$subdocument  
+
+! Excepciones para noticias  
+||nytimes.com^$image,domain=~nytimes.com  
+||bbc.com^$script,domain=~bbc.co.uk  
+||archive.org^$script  
+
+! Servicios con anuncios "aceptables"  
+||deviantart.com^$image,domain=~deviantart.com  
+||patreon.com^$subdocument  
