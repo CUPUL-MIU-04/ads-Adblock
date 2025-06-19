@@ -25,10 +25,3 @@
 ##div[class*="popup" i]:not([class*="video"])  
 ##div[id*="modal" i]:not([id*="player"])  
 ##div[class*="overlay" i]:not([class*="stream"])  
-
-### 📺 EXCEPCIONES PARA STREAMING (Cuevana/Netflix/etc)  
-@@||cuevana.biz^$generichide  
-@@||googlevideo.com^$media,domain=cuevana.biz  
-@@||cloudflarestream.com^$media  
-@@||jwplatform.com^$domain=cuevana.biz  
-##+js(remove-attr, autoplay, video)  
