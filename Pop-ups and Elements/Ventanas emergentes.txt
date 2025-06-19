@@ -1,0 +1,50 @@
+! 🚫 POP-UP BLOCKER STRICT (2024)  
+! Bloquea ventanas emergentes, overlays y redirecciones engañosas  
+! Compatible con uBlock Origin, AdGuard, Adblock Plus, etc.  
+! ------------------------------------------------------------  
+
+### 🎯 SCRIPTS DE POP-UPS GENÉRICOS  
+||*/popup.js  
+||*/popunder.js  
+||*/popads.*  
+||*/popup_*  
+||*/ad_popup/*  
+||*/pop/*.js  
+
+### 🌐 DOMINIOS DE PUBLICIDAD CON POP-UPS AGRESIVOS  
+||doubleclick.net^$popup  
+||adblade.com^$popup  
+||propellerads.com^$popup  
+||taboola.com^$popup  
+||outbrain.com^$popup  
+||revcontent.com^$popup  
+||mgid.com^$popup  
+||adskeeper.co.uk^$popup  
+
+### 🔄 REDIRECCIONES NO DESEADAS  
+||*/redirect?url=*  
+||*/go.php?to=*  
+||*/pop.php?url=*  
+||*/exit.php?to=*  
+||*/gateway?url=*  
+
+### 🖥️ OVERLAYS MOLESTOS (Suscribirse, Cookies, Notificaciones)  
+##div[class*="popup"]  
+##div[class*="overlay"]  
+##div[class*="lightbox"]  
+##div[class*="modal"]  
+##div[class*="newsletter"]  
+##div[id*="cookie-banner"]  
+##div[class*="subscribe"]  
+
+### ❌ BLOQUEO DE POP-UPS EN SITIOS ESPECÍFICOS  
+||forbes.com^$popup  
+||techradar.com^$popup  
+||cnet.com^$popup  
+||weather.com^$popup  
+||ign.com^$popup  
+
+! 🛡️ REGLAS AVANZADAS (CSS + JS)  
+##^script:has-text(/popup/i)  
+##^script:has-text(/underlay/i)  
+##.adblock-detect:remove()  
