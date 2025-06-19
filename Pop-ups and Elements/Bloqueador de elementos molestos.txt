@@ -4,14 +4,14 @@
 ! 🔧 Compatible con: AdGuard, uBlock Origin, Adblock Plus
 ! ------------------------------------------------------------
 
-### 🎯 BLOQUEO DE TECNOLOGÍAS DE POPUPS
-||*/popup*.js
-||*/popunder*.js
-||*/modal.js
-||*/lightbox.js
-||*/overlay.js
-||*/adwindow.js
-||*/exitpop.js
-||*/popads/*.js
-||*/popcorn.js
-||*/popuptest.js
+### 🌐 DOMINIOS DE ANUNCIOS/POPUPS (Nivel Nuclear)
+||doubleclick.net^$popup,important
+||taboola.com^$popup,important
+||outbrain.com^$popup,important
+||revcontent.com^$popup,important
+||propellerads.com^$popup,important
+||mgid.com^$popup,important
+||adskeeper.*^$popup,important
+||adblade.com^$popup,important
+||zergnet.com^$popup,important
+||content.ad^$popup,important
