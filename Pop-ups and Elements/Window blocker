@@ -1,47 +1,81 @@
-! 🌟 BLOQUEADOR AVANZADO DE POP-UPS (VERSIÓN INTELIGENTE)  
-! ✅ Bloquea anuncios emergentes PERO preserva reproductores de video  
-! 📅 Actualizado: Junio 2024  
-! 🔧 Compatible: uBlock Origin, AdGuard, Adblock Plus  
-! ------------------------------------------------------------  
+! 🔥 BLOQUEADOR DE VENTANAS EMERGENTES EXTREMO (ULTRA-AGRESIVO)
+! ⚠️ ADVERTENCIA: Este filtro puede romper funcionalidades en algunos sitios
+! 📅 Última actualización: 2024
+! 🔧 Compatible con: AdGuard, uBlock Origin, Adblock Plus
+! ------------------------------------------------------------
 
-### 🔥 BLOQUEO NUCLEAR DE POPUPS (Seguro para streaming)  
-||*/popup*.js$script,third-party  
-||*/popunder.js$script,third-party  
-||*/adwindow.js$script,domain=~cuevana.biz|~netflix.com  
-||/popads/*.js$script,third-party  
+### 🎯 BLOQUEO DE TECNOLOGÍAS DE POPUPS
+||*/popup*.js
+||*/popunder*.js
+||*/modal.js
+||*/lightbox.js
+||*/overlay.js
+||*/adwindow.js
+||*/exitpop.js
+||*/popads/*.js
+||*/popcorn.js
+||*/popuptest.js
 
-### 🎯 DOMINIOS DE ANUNCIOS (Enfoque selectivo)  
-||doubleclick.net^$popup  
-||taboola.com^$popup,important  
-||outbrain.com^$popup,important  
-||revcontent.com^$domain=~cuevana.biz  
+### 🌐 DOMINIOS DE ANUNCIOS/POPUPS (Nivel Nuclear)
+||doubleclick.net^$popup,important
+||taboola.com^$popup,important
+||outbrain.com^$popup,important
+||revcontent.com^$popup,important
+||propellerads.com^$popup,important
+||mgid.com^$popup,important
+||adskeeper.*^$popup,important
+||adblade.com^$popup,important
+||zergnet.com^$popup,important
+||content.ad^$popup,important
 
-### 🛡️ BLOQUEO DE REDIRECCIONES ENGÀÑOSAS  
-||*/redirect?url=*$popup  
-||*/go.php?to=*$popup  
-||*/exitpopup?url=*$popup  
+### 🛡️ BLOQUEO DE REDIRECCIONES (Incluye métodos avanzados)
+||*/go.php?url=*$popup
+||*/redirect.php?url=*$popup
+||*/gateway?url=*$popup
+||*/out?url=*$popup
+||*/exit?url=*$popup
+||*/link?url=*$popup
+||*/jump?url=*$popup
+||*/bridge?url=*$popup
+||*/clk?url=*$popup
+||*/adlink?url=*$popup
 
-### 💡 OVERLAYS INTELIGENTES (Evita reproductores)  
-##div[class*="popup" i]:not([class*="video"])  
-##div[id*="modal" i]:not([id*="player"])  
-##div[class*="overlay" i]:not([class*="stream"])  
+### 💥 OVERLAYS Y MODALES (Eliminación Total)
+##div[class^="popup" i]:remove()
+##div[id^="popup" i]:remove()
+##div[class^="modal" i]:remove()
+##div[id^="modal" i]:remove()
+##div[class^="overlay" i]:remove()
+##div[id^="overlay" i]:remove()
+##div[class^="lightbox" i]:remove()
+##div[class^="dialog" i]:remove()
+##div[class^="subscribe" i]:remove()
+##div[class^="newsletter" i]:remove()
 
-### 🍪 BLOQUEO DE COOKIES + GDPR (No invasivo)  
-##div[id*="cookie" i]:remove()  
-##div[class*="gdpr" i]:remove()  
-##.cc_banner:remove()  
+### ⚡ BLOQUEO DE ELEMENTOS DINÁMICOS
+##^script:has-text(/popup/i)
+##^script:has-text(/modal/i)
+##^script:has-text(/overlay/i)
+##^script:has-text(/lightbox/i)
+##^script:has-text(/underlay/i)
+##^script:has-text(/exitintent/i)
+##^script:has-text(/interstitial/i)
 
-### 📺 EXCEPCIONES PARA STREAMING (Cuevana/Netflix/etc)  
-@@||cuevana.biz^$generichide  
-@@||googlevideo.com^$media,domain=cuevana.biz  
-@@||cloudflarestream.com^$media  
-@@||jwplatform.com^$domain=cuevana.biz  
-##+js(remove-attr, autoplay, video)  
+### 🚨 BLOQUEO ESPECÍFICO PARA SITIOS PROBLEMÁTICOS
+! Medios de comunicación
+||forbes.com^$popup,important
+||techradar.com^$popup,important
+||cnet.com^$popup,important
 
-### ⚠️ BLOQUEO DE TÉCNICAS AVANZADAS  
-##^script:has-text(/underlay/i)  
-##^script:has-text(/exitintent/i)  
+! Streaming
+||hulu.com^$popup,important
+||disneyplus.com^$popup,important
 
-### 🛠️ REGLAS DE COMPATIBILIDAD  
-||$popup,domain=~cuevana.biz|~netflix.com  
-||$third-party,domain=~cuevana.biz  
+! Noticias
+||dailymail.co.uk^$popup,important
+||nytimes.com^$popup,important
+
+### 🛠️ REGLAS AVANZADAS
+||$popup,third-party
+||$subdocument,domain=~facebook.com|~twitter.com
+||$empty,media
