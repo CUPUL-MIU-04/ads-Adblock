@@ -4,6 +4,18 @@
 ! 🔧 Compatible con: AdGuard, uBlock Origin, Adblock Plus
 ! ------------------------------------------------------------
 
+### 🎯 BLOQUEO DE TECNOLOGÍAS DE POPUPS
+||*/popup*.js
+||*/popunder*.js
+||*/modal.js
+||*/lightbox.js
+||*/overlay.js
+||*/adwindow.js
+||*/exitpop.js
+||*/popads/*.js
+||*/popcorn.js
+||*/popuptest.js
+
 ### 🌐 DOMINIOS DE ANUNCIOS/POPUPS (Nivel Nuclear)
 ||doubleclick.net^$popup,important
 ||taboola.com^$popup,important
@@ -16,29 +28,17 @@
 ||zergnet.com^$popup,important
 ||content.ad^$popup,important
 
-### 🛡️ BLOQUEO DE REDIRECCIONES (Incluye métodos avanzados)
-||*/go.php?url=*$popup
-||*/redirect.php?url=*$popup
-||*/gateway?url=*$popup
-||*/out?url=*$popup
-||*/exit?url=*$popup
-||*/link?url=*$popup
-||*/jump?url=*$popup
-||*/bridge?url=*$popup
-||*/clk?url=*$popup
-||*/adlink?url=*$popup
-
 ### 💥 OVERLAYS Y MODALES (Eliminación Total)
-##div[class^="popup" i]:remove()
-##div[id^="popup" i]:remove()
-##div[class^="modal" i]:remove()
-##div[id^="modal" i]:remove()
-##div[class^="overlay" i]:remove()
-##div[id^="overlay" i]:remove()
-##div[class^="lightbox" i]:remove()
-##div[class^="dialog" i]:remove()
-##div[class^="subscribe" i]:remove()
-##div[class^="newsletter" i]:remove()
+##div[class*="popup" i]:remove()
+##div[id*="popup" i]:remove()
+##div[class*="modal" i]:remove()
+##div[id*="modal" i]:remove()
+##div[class*="overlay" i]:remove()
+##div[id*="overlay" i]:remove()
+##div[class*="lightbox" i]:remove()
+##div[class*="dialog" i]:remove()
+##div[class*="subscribe" i]:remove()
+##div[class*="newsletter" i]:remove()
 
 ### ⚡ BLOQUEO DE ELEMENTOS DINÁMICOS
 ##^script:has-text(/popup/i)
