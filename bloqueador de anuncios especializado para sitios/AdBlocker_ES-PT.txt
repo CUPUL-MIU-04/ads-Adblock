@@ -1,0 +1,49 @@
+! 🛡️ BLOQUEADOR DE ANUNCIOS PARA ESPAÑOL/PORTUGUÉS
+! ✅ Enfocado en sitios web hispanohablantes y lusófonos
+! 📅 Actualización: Julio 2024
+! 🔧 Compatible: uBlock Origin, AdGuard, Adblock Plus
+! ------------------------------------------------------------
+
+### 🌐 BLOQUEO POR IDIOMA (Reglas específicas)
+||*/ads_es.js$script,domain=~es|~mx|~ar|~co
+||*/ads_pt.js$script,domain=~pt|~br|~ao
+||*/banners/*$image,domain=~es|~mx|~br|~pt
+
+### 🎯 SERVIDORES DE ANUNCIOS REGIONALES
+||adservice.google.es^
+||adservice.google.com.br^
+||anuncios.es^
+||publicidade.pt^
+||ads.sapo.pt^
+||globoads.com.br^
+||adbrasil.com.br^
+||adlatina.com^
+||adsmexico.com.mx^
+
+### 📢 PALABRAS CLAVE EN ESP/PT (Bloqueo por contenido)
+##div[id*="anuncio"]
+##div[class*="publicidad"]
+##div[id*="patrocinado"]
+##div[class*="propaganda"]
+##div[id*="banner"][lang="es"]
+##div[id*="banner"][lang="pt"]
+##a[href*="patrocinio"]
+##a[href*="promocao"]
+
+### 📺 VIDEO ADS REGIONALES
+||*/vast_es.xml$xmlhttprequest,domain=~es|~mx
+||*/vast_pt.xml$xmlhttprequest,domain=~pt|~br
+##div[class*="video-ads"][lang="es"]
+##div[class*="video-ads"][lang="pt"]
+
+### 🛑 POPUPS REGIONALES
+##div[class*="ventana"][lang="es"]:remove()
+##div[class*="popup"][lang="pt"]:remove()
+||*/popup_es.js$script
+||*/popup_pt.js$script
+
+### 📰 MEDIOS EN ESP/PT (Excepciones para noticias)
+! Permite algunos elementos en periódicos importantes
+@@||elpais.com^$generichide
+@@||globo.com^$generichide
+@@||folha.com.br^$generichide
