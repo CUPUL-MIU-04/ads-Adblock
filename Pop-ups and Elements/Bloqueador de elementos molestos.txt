@@ -1,81 +1,81 @@
-! 🚫 ANNOYING ELEMENT BLOCKER - COMPREHENSIVE FILTER LIST
-! Blocks: Cookie Banners, Newsletter Popups, Floating Social Bars, Autoplay Videos, and more
-! Last Updated: 2024
-! Works with: uBlock Origin, AdGuard, Adblock Plus
+! 🔥 BLOQUEADOR DE VENTANAS EMERGENTES EXTREMO (ULTRA-AGRESIVO)
+! ⚠️ ADVERTENCIA: Este filtro puede romper funcionalidades en algunos sitios
+! 📅 Última actualización: 2024
+! 🔧 Compatible con: AdGuard, uBlock Origin, Adblock Plus
 ! ------------------------------------------------------------
 
-### 🍪 COOKIE/GDPR BANNERS (Blocks 99% of cookie consent popups)
-##div[id*="cookie"]
-##div[class*="cookie"]
-##div[id*="gdpr"]
-##div[class*="gdpr"]
-##div[id*="consent"]
-##div[class*="consent"]
-##.cc-banner
-##.cookie-law
-##.eu-cookie
-##.js-cookie-banner
+### 🎯 BLOQUEO DE TECNOLOGÍAS DE POPUPS
+||*/popup*.js
+||*/popunder*.js
+||*/modal.js
+||*/lightbox.js
+||*/overlay.js
+||*/adwindow.js
+||*/exitpop.js
+||*/popads/*.js
+||*/popcorn.js
+||*/popuptest.js
 
-### 📧 NEWSLETTER POPUPS
-##div[id*="newsletter"]
-##div[class*="newsletter"]
-##div[id*="subscribe"]
-##div[class*="subscribe"]
-##.email-popup
-##.lead-form
-##.signup-modal
+### 🌐 DOMINIOS DE ANUNCIOS/POPUPS (Nivel Nuclear)
+||doubleclick.net^$popup,important
+||taboola.com^$popup,important
+||outbrain.com^$popup,important
+||revcontent.com^$popup,important
+||propellerads.com^$popup,important
+||mgid.com^$popup,important
+||adskeeper.*^$popup,important
+||adblade.com^$popup,important
+||zergnet.com^$popup,important
+||content.ad^$popup,important
 
-### 🔔 ANNOYING NOTIFICATION BARS
-##div[class*="notification"]
-##div[id*="notification"]
-##.alert-bar
-##.top-banner
-##.promo-bar
-##.site-message
+### 🛡️ BLOQUEO DE REDIRECCIONES (Incluye métodos avanzados)
+||*/go.php?url=*$popup
+||*/redirect.php?url=*$popup
+||*/gateway?url=*$popup
+||*/out?url=*$popup
+||*/exit?url=*$popup
+||*/link?url=*$popup
+||*/jump?url=*$popup
+||*/bridge?url=*$popup
+||*/clk?url=*$popup
+||*/adlink?url=*$popup
 
-### ▶️ AUTOPLAY VIDEO BLOCKER
-##video[autoplay]
-##iframe[src*="autoplay"]
-##.autoplay-video
-||youtube.com/get_video_info*
+### 💥 OVERLAYS Y MODALES (Eliminación Total)
+##div[class*="popup" i]:remove()
+##div[id*="popup" i]:remove()
+##div[class^="modal" i]:remove()
+##div[id^="modal" i]:remove()
+##div[class*="overlay" i]:remove()
+##div[id^="overlay" i]:remove()
+##div[class*="lightbox" i]:remove()
+##div[class*="dialog" i]:remove()
+##div[class*="subscribe" i]:remove()
+##div[class*="newsletter" i]:remove()
 
-### 🏷️ FLOATING SOCIAL MEDIA BARS
-##.social-share
-##.share-bar
-##.floating-share
-##.sticky-social
-##.follow-us
+### ⚡ BLOQUEO DE ELEMENTOS DINÁMICOS
+##^script:has-text(/popup/i)
+##^script:has-text(/modal/i)
+##^script:has-text(/overlay/i)
+##^script:has-text(/lightbox/i)
+##^script:has-text(/underlay/i)
+##^script:has-text(/exitintent/i)
+##^script:has-text(/interstitial/i)
 
-### 💰 IN-PAGE ADS & SPONSORED CONTENT
-##.sponsored-content
-##.recommended-widget
-##.partner-box
-##.ad-placement
-##.paid-article
-##.native-ad
+### 🚨 BLOQUEO ESPECÍFICO PARA SITIOS PROBLEMÁTICOS
+! Medios de comunicación
+||forbes.com^$popup,important
+||techradar.com^$popup,important
+||cnet.com^$popup,important
 
-### 🚫 OTHER ANNOYING ELEMENTS
-##.scroll-jacking
-##.exit-intent
-##.age-gate
-##.paywall
-##.premium-overlay
-##.app-download-banner
-##.floating-chat
-##.live-chat
-##.survey-popup
+! Streaming
+||hulu.com^$popup,important
+||disneyplus.com^$popup,important
 
-### 🛡️ SITE-SPECIFIC FIXES
-! News Sites
-##.breaking-news-ticker
-##.article-recommendations
+! Noticias
+||dailymail.co.uk^$popup,important
+||nytimes.com^$popup,important
 
-! E-commerce Sites
-##.abandon-cart-popup
-##.discount-popup
-##.countdown-timer
-
-! Streaming Sites
-##.upsell-banner
-##.premium-promo
-##.subscribe-now
+### 🛠️ REGLAS AVANZADAS
+||$popup,third-party
+||$subdocument,domain=~facebook.com|~twitter.com
+||$empty,media
